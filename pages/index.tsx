@@ -12,7 +12,6 @@ interface Props {
 }
 
 export default function Home({posts}: Props) {
-  console.log(`posts: ${JSON.stringify(posts, undefined, 2)}`)
   return (
     <div className='max-w-7xl mx-auto'>
       <Head>
@@ -29,7 +28,7 @@ export default function Home({posts}: Props) {
                 href={`/post/${p.slug.current}`}>
                   <div className='border rounded-lg group cursor-pointer overflow-hidden'>
                     {
-                      p.mainImage && <img 
+                      p.mainImage && <img
                       className='h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out'
                       src={urlFor(p.mainImage).url()!}
                       alt='Post Image'
